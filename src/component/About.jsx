@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger)
 function About() {
     useGSAP(() => {
         const clipAnimation = gsap.timeline({
-            scrollTrigger:{
+            scrollTrigger: {
                 trigger: '#clip',
                 start: 'center center',
                 end: '+=800 center',
@@ -23,27 +23,28 @@ function About() {
         })
     })
 
-  return (
-    <div id='about' className='min-h-screen w-screen'>
-        <div className='relative mb-8 mt-36 flex flex-col items-center gap-5'>
-            <h2 className='font-general text-sm uppercase md:text-lg'> Welcome to zentry</h2>
+    return (
+        <div id='about' className='min-h-screen w-screen'>
+            <div className='relative mb-8 mt-36 flex flex-col items-center gap-5'>
+                <h2 className='font-general text-sm uppercase md:text-lg'> Welcome to zentry</h2>
 
-            <AnimatedTitle/>
+                <AnimatedTitle title={`Discover the world's largest shared adventure`} 
+                containerClass="mt-5 !text-black text-center"/>
 
-            <div className='about-subtext'>
-                <p>The Game of Games begins-your life, now an epic MMORPG</p>
-                <p>Zentry unites every player from countless games and platform</p>
+                <div className='about-subtext'>
+                    <p>The Game of Games begins-your life, now an epic MMORPG</p>
+                    <p>Zentry unites every player from countless games and platform</p>
+                </div>
+            </div>
+
+            <div className='h-dvh w-screen' id='clip'>
+                <div className='mask-clip-path about-image'>
+                    <img src="img/about.webp" alt=""
+                        className='absolute left-0 top-0 size-full object-cover' />
+                </div>
             </div>
         </div>
-
-        <div className='h-dvh w-screen' id='clip'>
-            <div className='mask-clip-path about-image'>
-                <img src="img/about.webp" alt=""  
-                className='absolute left-0 top-0 size-full object-cover'/>
-            </div>
-        </div>
-    </div>
-  )
+    )
 }
 
 export default About
