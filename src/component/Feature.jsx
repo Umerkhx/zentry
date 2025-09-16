@@ -1,10 +1,21 @@
 import { TiLocationArrow } from "react-icons/ti"
+import Tilt from "react-parallax-tilt"
+
+
 
 
 const BentoCard = ({ src, title, description, isComingSoon }) => {
     return (
 
-        <div className="relative size-full">
+        <Tilt
+            glareEnable={true}
+            glareMa xOpacity={0.5}
+            glareBorderRadius="12px"
+            tiltMaxAngleX={10}
+            tiltMaxAngleY={10}
+            transitionSpeed={3000}
+            className="relative size-full rounded-lg overflow-hidden"
+        >
             <video
                 src={src}
                 loop
@@ -19,7 +30,7 @@ const BentoCard = ({ src, title, description, isComingSoon }) => {
                 </div>
             </div>
 
-        </div>
+        </Tilt>
     )
 }
 
@@ -66,21 +77,46 @@ const Feature = () => {
                             description={'A cross-wolrd AI agent - elevating your gameplay to be more fun and productive'} />
                     </div>
 
-                    <div className="bento-tilt_2">
-                        <div className="flex size-full flex-col justify-between background-violet-300 p-5">
-                            <h1 className="font-zentry uppercase md:text-5xl text-3xl max-w-64 text-gray-200/90 special-font">M<b>o</b>re <br /> Co<b>m</b>ing <br /> Soon</h1>
 
-                            <TiLocationArrow className="m-5 md:scale-[5] scale-[4] text-gray-200/90 self-end"/>
+                    
+                        <div className="bento-tilt_2 group">
+                            <Tilt
+                        glareEnable={true}
+                        glareMa xOpacity={0.5}
+                        glareBorderRadius="12px"
+                        tiltMaxAngleX={10}
+                        tiltMaxAngleY={10}
+                        transitionSpeed={3000}
+                        className="relative size-full rounded-lg overflow-hidden"
+                    >
+                            <div className="flex size-full flex-col justify-between bg-violet-900 p-5 group-hover:bg-zinc-100 transition ease-in delay-100 ">
+                                <h1 className="font-zentry uppercase md:text-5xl text-3xl  max-w-64 text-gray-200/90
+                            group-hover:text-purple-900 special-font">M<b>o</b>re <br /> Co<b>m</b>ing <br /> Soon</h1>
+
+                                <TiLocationArrow className="m-5 md:scale-[5] scale-[4] text-gray-200/90 group-hover:text-purple-900 self-end" />
+                            </div>
+                    </Tilt>
                         </div>
-                    </div>
+
 
                     <div className="bento-tilt_2">
-                        <video 
-                        src="videos/feature-5.mp4"
-                        loop
-                        muted
-                        autoPlay
-                        className="size-full object-cover object-center"/>
+                        <Tilt
+                            glareEnable={true}
+                            glareMa xOpacity={0.5}
+                            glareBorderRadius="12px"
+                            tiltMaxAngleX={10}
+                            tiltMaxAngleY={10}
+                            transitionSpeed={3000}
+                            className=" rounded-lg overflow-hidden"
+                        >
+                            <video
+                                src="videos/feature-5.mp4"
+                                loop
+                                muted
+                                autoPlay
+                                className="size-full object-cover object-center" />
+                        </Tilt>
+
                     </div>
 
 

@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { useWindowScroll } from 'react-use'
 
 
-const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"]
+const navItems = ["Home", "Service", "About", "Contact"]
 
 const Navbar = () => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(false)
@@ -65,7 +65,7 @@ const Navbar = () => {
                         <img src="/img/logo.png" alt="logo" className='w-10' />
                         <Button
                             id="product-button"
-                            title="Product"
+                            title="Chat with expert"
                             rightIcon={<TiLocationArrow />}
                             containerClass='bg-blue-50 md:flex hidden items-center justify-center gap-1 ' />
                     </div>
