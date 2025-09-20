@@ -132,7 +132,7 @@ function Hero() {
             <div className="absolute left-0 top-0 z-40 size-full">
                 <div className="mt-16 px-5 sm:px-10">
                     <h1 className="special-font hero-heading blue-100">redefi<b>n</b>e </h1>
-                    <p className="mb-5 -mt-12 max-w-64 font-robert blue-100">
+                    <p className="mb-5 -mt-2 md:-mt-10 max-w-64 font-robert blue-100">
                         Enter The Metagame Layer <br /> Unleash the Play Economy
                     </p>
                     <Button id="watch-trailer"  title="Watch Trailer" leftIcon={<TiLocationArrow/>} containerClass="bg-yellow-300 flex-center gap-1"/>
